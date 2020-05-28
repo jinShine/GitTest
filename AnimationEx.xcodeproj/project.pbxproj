@@ -11,7 +11,6 @@
 		36C06E60247E542C0096CF88 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C06E5F247E542C0096CF88 /* TransitionViewController.swift */; };
 		36C06E63247E5B5D0096CF88 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C06E62247E5B5D0096CF88 /* SnowView.swift */; };
 		5C1EB31423AB2EED00AB69D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1EB31323AB2EED00AB69D4 /* AppDelegate.swift */; };
-		5C1EB31623AB2EED00AB69D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1EB31523AB2EED00AB69D4 /* SceneDelegate.swift */; };
 		5C1EB31823AB2EED00AB69D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1EB31723AB2EED00AB69D4 /* ViewController.swift */; };
 		5C1EB31B23AB2EED00AB69D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1EB31923AB2EED00AB69D4 /* Main.storyboard */; };
 		5C1EB31D23AB2EEE00AB69D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1EB31C23AB2EEE00AB69D4 /* Assets.xcassets */; };
@@ -24,7 +23,6 @@
 		36C06E62247E5B5D0096CF88 /* SnowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowView.swift; sourceTree = "<group>"; };
 		5C1EB31023AB2EED00AB69D4 /* AnimationEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1EB31323AB2EED00AB69D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C1EB31523AB2EED00AB69D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5C1EB31723AB2EED00AB69D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C1EB31A23AB2EED00AB69D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C1EB31C23AB2EEE00AB69D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 			children = (
 				36C06E61247E55670096CF88 /* Extention */,
 				5C1EB31323AB2EED00AB69D4 /* AppDelegate.swift */,
-				5C1EB31523AB2EED00AB69D4 /* SceneDelegate.swift */,
 				5C1EB31723AB2EED00AB69D4 /* ViewController.swift */,
 				5C1EB31923AB2EED00AB69D4 /* Main.storyboard */,
 				5C1EB31C23AB2EEE00AB69D4 /* Assets.xcassets */,
@@ -159,7 +156,6 @@
 				36C06E5E247E4FE40096CF88 /* BasicViewController.swift in Sources */,
 				5C1EB31423AB2EED00AB69D4 /* AppDelegate.swift in Sources */,
 				36C06E60247E542C0096CF88 /* TransitionViewController.swift in Sources */,
-				5C1EB31623AB2EED00AB69D4 /* SceneDelegate.swift in Sources */,
 				36C06E63247E5B5D0096CF88 /* SnowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

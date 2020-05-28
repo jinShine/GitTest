@@ -28,6 +28,9 @@ class BasicViewController: UIViewController {
     optionsAnimation()
   }
   
+  /*:
+   # 1. Bisic Animate
+   */
   private func basicAnimation() {
     UIView.animate(withDuration: 1.0, animations: {
       //하나만 가능한게 아니고 동시에 여러개의 속성의 애니메이션이 가능하다.
@@ -41,6 +44,9 @@ class BasicViewController: UIViewController {
     })
   }
   
+  /*:
+  # 2. Spring Animate
+  */
   private func springAnimation() {
     UIView.animate(withDuration: 1.0,
                    delay: 0,
@@ -70,6 +76,7 @@ class BasicViewController: UIViewController {
     object.frame = CGRect(x: 50, y: 150, width: 50, height: 50)
     object.alpha = 1.0
     object.backgroundColor = UIColor.yellow
+    
     // 애니메이션을 제거 하는 방법
     object.layer.removeAllAnimations()
   }

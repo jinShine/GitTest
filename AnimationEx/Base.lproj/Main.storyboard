@@ -67,14 +67,67 @@
                     <view key="view" contentMode="scaleToFill" id="gS9-Jp-1Gi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny" translatesAutoresizingMaskIntoConstraints="NO" id="dnw-Uv-Kv2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jU2-ge-gXp">
+                                <rect key="frame" x="185" y="433" width="44" height="30"/>
+                                <state key="normal" title="Action">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateAction:" destination="3uB-78-rzG" eventType="touchUpInside" id="Ti0-sw-715"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-sunny-cloud-1" translatesAutoresizingMaskIntoConstraints="NO" id="U4L-QJ-TL8">
+                                <rect key="frame" x="-49" y="130" width="134" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-sunny-cloud-2" translatesAutoresizingMaskIntoConstraints="NO" id="xXw-Ip-6v7">
+                                <rect key="frame" x="219" y="247" width="153" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="balloon" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-yD-0IZ">
+                                <rect key="frame" x="40" y="339" width="61" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="oia-53-qxh">
+                                <rect key="frame" x="30" y="108" width="101" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AE 1107" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWe-08-pcw">
+                                <rect key="frame" x="158" y="555" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dnw-Uv-Kv2" firstAttribute="bottom" secondItem="C1B-0l-TTh" secondAttribute="bottom" id="7hH-cc-FLG"/>
+                            <constraint firstItem="dnw-Uv-Kv2" firstAttribute="leading" secondItem="C1B-0l-TTh" secondAttribute="leading" id="FQk-1T-fgO"/>
+                            <constraint firstItem="jU2-ge-gXp" firstAttribute="centerY" secondItem="gS9-Jp-1Gi" secondAttribute="centerY" id="RyP-Xw-7Mc"/>
+                            <constraint firstItem="dnw-Uv-Kv2" firstAttribute="top" secondItem="gS9-Jp-1Gi" secondAttribute="top" id="koC-GJ-TAA"/>
+                            <constraint firstItem="jU2-ge-gXp" firstAttribute="centerX" secondItem="gS9-Jp-1Gi" secondAttribute="centerX" id="nvU-2C-Jhc"/>
+                            <constraint firstItem="C1B-0l-TTh" firstAttribute="trailing" secondItem="dnw-Uv-Kv2" secondAttribute="trailing" id="pOM-fE-L4z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="C1B-0l-TTh"/>
                     </view>
                     <navigationItem key="navigationItem" id="4jx-nE-lMK"/>
+                    <connections>
+                        <outlet property="balloon" destination="HfM-yD-0IZ" id="EQr-Zn-d47"/>
+                        <outlet property="bgImagView" destination="dnw-Uv-Kv2" id="Gp5-dx-n5p"/>
+                        <outlet property="cloud1" destination="U4L-QJ-TL8" id="yOc-aF-3Ow"/>
+                        <outlet property="cloud2" destination="xXw-Ip-6v7" id="jSI-rA-isr"/>
+                        <outlet property="flightNr" destination="RWe-08-pcw" id="2qV-U5-NOv"/>
+                        <outlet property="plane" destination="oia-53-qxh" id="6FK-f8-8tZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNx-9a-SDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3116" y="554"/>
+            <point key="canvasLocation" x="3115.9420289855075" y="553.125"/>
         </scene>
         <!--Item-->
         <scene sceneID="ewf-oq-AuS">
@@ -148,6 +201,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ysE-rg-WhV"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f7W-Qk-rYp">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -160,4 +214,11 @@
             <point key="canvasLocation" x="979.71014492753636" y="150.66964285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="balloon" width="50" height="65"/>
+        <image name="bg-sunny" width="320" height="568"/>
+        <image name="bg-sunny-cloud-1" width="159" height="50"/>
+        <image name="bg-sunny-cloud-2" width="138" height="49"/>
+        <image name="plane" width="85" height="36"/>
+    </resources>
 </document>
