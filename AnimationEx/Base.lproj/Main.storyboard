@@ -129,20 +129,38 @@
             </objects>
             <point key="canvasLocation" x="3115.9420289855075" y="553.125"/>
         </scene>
-        <!--View Controller-->
+        <!--Keyframe View Controller-->
         <scene sceneID="w1G-vH-718">
             <objects>
-                <viewController id="o36-td-ewX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Keyframe" id="o36-td-ewX" customClass="KeyframeViewController" customModule="AnimationEx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QI0-F5-ZBQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny" translatesAutoresizingMaskIntoConstraints="NO" id="6ss-ZM-9Gh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="5dR-j2-cHy">
+                                <rect key="frame" x="152" y="400" width="110" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6ss-ZM-9Gh" firstAttribute="top" secondItem="c7G-Hn-WEm" secondAttribute="top" id="ByX-eN-YgV"/>
+                            <constraint firstItem="c7G-Hn-WEm" firstAttribute="bottom" secondItem="6ss-ZM-9Gh" secondAttribute="bottom" id="CLU-rl-8gk"/>
+                            <constraint firstItem="6ss-ZM-9Gh" firstAttribute="leading" secondItem="c7G-Hn-WEm" secondAttribute="leading" id="H7z-pF-hDU"/>
+                            <constraint firstItem="c7G-Hn-WEm" firstAttribute="trailing" secondItem="6ss-ZM-9Gh" secondAttribute="trailing" id="dmu-2V-aqS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="c7G-Hn-WEm"/>
                     </view>
+                    <connections>
+                        <outlet property="planeImage" destination="5dR-j2-cHy" id="lLm-Ys-uae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySE-3O-Dbm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3116" y="1226"/>
+            <point key="canvasLocation" x="3115.9420289855075" y="1225.4464285714284"/>
         </scene>
         <!--Item-->
         <scene sceneID="ewf-oq-AuS">
