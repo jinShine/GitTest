@@ -165,13 +165,52 @@
         <!--Auto Layout Ex View Controller-->
         <scene sceneID="i2U-d6-XR0">
             <objects>
-                <viewController storyboardIdentifier="AutoLayoutEx1" id="TGt-pO-lyr" customClass="AutoLayoutExViewController" customModule="AnimationEx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AutoLayout" id="TGt-pO-lyr" customClass="AutoLayoutExViewController" customModule="AnimationEx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pji-wE-P2x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIS-8F-6e4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiK-r7-ldk">
+                                        <rect key="frame" x="180" y="28" width="54" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS2-Ak-7Co">
+                                        <rect key="frame" x="364" y="17.5" width="30" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="actionToggleMenu:" destination="TGt-pO-lyr" eventType="touchUpInside" id="Prm-Xu-7mn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="zS2-Ak-7Co" firstAttribute="centerY" secondItem="vIS-8F-6e4" secondAttribute="centerY" id="8MB-WA-XDI"/>
+                                    <constraint firstAttribute="height" constant="80" id="D3u-Wr-Fdl"/>
+                                    <constraint firstAttribute="trailing" secondItem="zS2-Ak-7Co" secondAttribute="trailing" constant="20" id="Ofi-Cd-E3W"/>
+                                    <constraint firstItem="eiK-r7-ldk" firstAttribute="centerX" secondItem="vIS-8F-6e4" secondAttribute="centerX" id="UTZ-sg-7l2"/>
+                                    <constraint firstItem="eiK-r7-ldk" firstAttribute="centerY" secondItem="vIS-8F-6e4" secondAttribute="centerY" id="rga-vp-GKe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HCP-av-Rcz" firstAttribute="trailing" secondItem="vIS-8F-6e4" secondAttribute="trailing" id="I6U-Y1-QZZ"/>
+                            <constraint firstItem="vIS-8F-6e4" firstAttribute="top" secondItem="HCP-av-Rcz" secondAttribute="top" id="NxC-fG-RzY"/>
+                            <constraint firstItem="vIS-8F-6e4" firstAttribute="leading" secondItem="HCP-av-Rcz" secondAttribute="leading" id="kDo-pf-PSG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HCP-av-Rcz"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonMenu" destination="zS2-Ak-7Co" id="Qjf-JU-Ck1"/>
+                        <outlet property="menuHeightConstraint" destination="D3u-Wr-Fdl" id="8FP-oY-hNO"/>
+                        <outlet property="titleLabel" destination="eiK-r7-ldk" id="6NU-wH-2Ml"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="To8-mo-Ns3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
