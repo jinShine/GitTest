@@ -14,7 +14,12 @@ class AutoLayoutExViewController: UIViewController {
   @IBOutlet var titleLabel: UILabel!
   @IBOutlet weak var menuHeightConstraint: NSLayoutConstraint!
   
+  //bottom
+  @IBOutlet weak var bottomToggleButton: UIButton!
+  @IBOutlet weak var bottomHeightConstraints: NSLayoutConstraint!
+  
   var isMenuOpen = false
+  var isBottomOpen = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -46,4 +51,24 @@ class AutoLayoutExViewController: UIViewController {
     }, completion: nil)
   }
   
+  @IBAction func actionBottomToggle(_ sender: UIButton) {
+    
+    isBottomOpen = !isBottomOpen
+    
+    bottomToggleButton.superview?.constraints.forEach { constraint in
+      print(" -> \(constraint.description)")
+      if constraint.firstItem === bottomToggleButton && constraint.firstAttribute == .leading {
+        constraint.constant = isBottomOpen ? 200.0 : 30.0
+      }
+    }
+    
+    bottomHeightConstraints.constant =  isBottomOpen ? 300.0 : 100.0
+    
+    let buttonTitle = isBottomOpen ? "Pop down" : "Pop up"
+    bottomToggleButton.setTitle(buttonTitle, for: .normal)
+    
+    UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 10.0, options: .curveEaseIn, animations: {
+      self.view.layoutIfNeeded()
+    }, completion: nil)
+  }
 }

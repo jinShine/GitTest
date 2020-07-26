@@ -199,8 +199,19 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0b5-qw-GFG">
                                 <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCq-3K-lzB">
+                                        <rect key="frame" x="30" y="35" width="49" height="30"/>
+                                        <state key="normal" title="Pop up"/>
+                                        <connections>
+                                            <action selector="actionBottomToggle:" destination="TGt-pO-lyr" eventType="touchUpInside" id="Tm0-qn-Am1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="rCq-3K-lzB" firstAttribute="leading" secondItem="0b5-qw-GFG" secondAttribute="leading" constant="30" id="0cI-if-QuQ"/>
+                                    <constraint firstItem="rCq-3K-lzB" firstAttribute="centerY" secondItem="0b5-qw-GFG" secondAttribute="centerY" id="Eb3-Oy-at9"/>
                                     <constraint firstAttribute="height" constant="100" id="Nfi-oI-frd"/>
                                 </constraints>
                             </view>
@@ -217,6 +228,8 @@
                         <viewLayoutGuide key="safeArea" id="HCP-av-Rcz"/>
                     </view>
                     <connections>
+                        <outlet property="bottomHeightConstraints" destination="Nfi-oI-frd" id="jnu-iL-gA4"/>
+                        <outlet property="bottomToggleButton" destination="rCq-3K-lzB" id="hPj-MQ-u7S"/>
                         <outlet property="buttonMenu" destination="zS2-Ak-7Co" id="Qjf-JU-Ck1"/>
                         <outlet property="menuHeightConstraint" destination="D3u-Wr-Fdl" id="8FP-oY-hNO"/>
                         <outlet property="titleLabel" destination="eiK-r7-ldk" id="6NU-wH-2Ml"/>
