@@ -56,7 +56,6 @@ class AutoLayoutExViewController: UIViewController {
     isBottomOpen = !isBottomOpen
     
     bottomToggleButton.superview?.constraints.forEach { constraint in
-      print(" -> \(constraint.description)")
       if constraint.firstItem === bottomToggleButton && constraint.firstAttribute == .leading {
         constraint.constant = isBottomOpen ? 200.0 : 30.0
       }
@@ -67,7 +66,7 @@ class AutoLayoutExViewController: UIViewController {
     let buttonTitle = isBottomOpen ? "Pop down" : "Pop up"
     bottomToggleButton.setTitle(buttonTitle, for: .normal)
     
-    UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 10.0, options: .curveEaseIn, animations: {
+    UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 10.0, options: .curveEaseIn, animations: {
       self.view.layoutIfNeeded()
     }, completion: nil)
   }
