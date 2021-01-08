@@ -31,6 +31,12 @@ class TransitionViewController: UIViewController {
     animateCloud(balloon)
   }
   
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    
+    reset()
+  }
+  
   @IBAction func animateAction(_ sender: UIButton) {
     
     basicTransition()
@@ -109,6 +115,15 @@ class TransitionViewController: UIViewController {
     })
     
     
+  }
+  
+  func reset() {
+    bgImagView = nil
+    cloud1 = nil
+    cloud2 = nil
+    plane = nil
+    balloon = nil
+    flightNr = nil
   }
   
 }
