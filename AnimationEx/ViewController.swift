@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  let viewControllers = ["Animate", "Transition", "Keyframe", "AutoLayout"]
+  let viewControllers = ["Animate", "Transition", "Keyframe", "AutoLayout", "LayerAnimation"]
 
   @IBOutlet weak var tableView: UITableView!
   
