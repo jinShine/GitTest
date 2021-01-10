@@ -11,4 +11,4 @@ iOS 애니메이션 예제들 모음
 - Crossfading
 - Cube transitions
 - Fade and bounce transitions
-- Layer
+- Layer(Core Animation)
