@@ -125,6 +125,7 @@ class LayerAnimationViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
+    //
 //    UIView.animate(withDuration: 0.5, delay: 0.5,
 //      animations: {
 //        self.cloud1.alpha = 1.0
