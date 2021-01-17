@@ -12,4 +12,4 @@ iOS 애니메이션 예제들 모음
 - Cube transitions
 - Fade and bounce transitions
 - Layer(Core Animation)
-- Lyaer(Core Animation Delegate)
+- Layer(Core Animation Delegate)
