@@ -70,89 +70,12 @@ class LayerAnimationViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-//    username.layer.position.x -= view.bounds.width
-//    password.layer.position.x -= view.bounds.width
-
-    let flyRight = CABasicAnimation(keyPath: "position.x")
-    flyRight.fromValue = -view.bounds.size.width / 2
-    flyRight.toValue = view.bounds.size.width / 2
-    flyRight.duration = 0.5
-    flyRight.fillMode = .both
-//    flyRight.isRemovedOnCompletion = false
+    coreAnimationBasic()
     
-    heading.layer.add(flyRight, forKey: nil)
-
-    flyRight.beginTime = CACurrentMediaTime() + 0.3
-    username.layer.add(flyRight, forKey: nil)
-    
-    flyRight.beginTime = CACurrentMediaTime() + 0.4
-    password.layer.add(flyRight, forKey: nil)
-    
-    username.layer.position.x = view.bounds.width / 2
-    password.layer.position.x = view.bounds.width / 2
-    
-    // background color
-    let changeColor = CABasicAnimation(keyPath: "backgroundColor")
-    changeColor.fromValue = UIColor.white.cgColor
-    changeColor.toValue = UIColor.red.cgColor
-    changeColor.duration = 1.0
-    changeColor.fillMode = .both
-    changeColor.isRemovedOnCompletion = false
-    
-    username.layer.add(changeColor, forKey: nil)
-
-    // opacity
-    let fadeIn = CABasicAnimation(keyPath: "opacity")
-    fadeIn.fromValue = 0.0
-    fadeIn.toValue = 1.0
-    fadeIn.duration = 0.5
-    fadeIn.fillMode = .backwards
-    
-    fadeIn.beginTime = CACurrentMediaTime() + 0.5
-    cloud1.layer.add(fadeIn, forKey: nil)
-    
-    fadeIn.beginTime = CACurrentMediaTime() + 0.7
-    cloud2.layer.add(fadeIn, forKey: nil)
-    
-    fadeIn.beginTime = CACurrentMediaTime() + 0.9
-    cloud3.layer.add(fadeIn, forKey: nil)
-    
-    
-    loginButton.center.y += 30.0
-    loginButton.alpha = 0.0
   }
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-
-    //
-//    UIView.animate(withDuration: 0.5, delay: 0.5,
-//      animations: {
-//        self.cloud1.alpha = 1.0
-//      },
-//      completion: nil
-//    )
-//
-//    UIView.animate(withDuration: 0.5, delay: 0.7,
-//      animations: {
-//        self.cloud2.alpha = 1.0
-//      },
-//      completion: nil
-//    )
-//
-//    UIView.animate(withDuration: 0.5, delay: 0.9,
-//      animations: {
-//        self.cloud3.alpha = 1.0
-//      },
-//      completion: nil
-//    )
-//
-//    UIView.animate(withDuration: 0.5, delay: 1.1,
-//      animations: {
-//        self.cloud4.alpha = 1.0
-//      },
-//      completion: nil
-//    )
 
     UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.5,
       initialSpringVelocity: 0.0,
@@ -269,6 +192,60 @@ class LayerAnimationViewController: UIViewController {
         self.animateCloud(cloud)
       }
     )
+  }
+  
+  func coreAnimationBasic() {
+    
+//    username.layer.position.x -= view.bounds.width
+//    password.layer.position.x -= view.bounds.width
+
+    let flyRight = CABasicAnimation(keyPath: "position.x")
+    flyRight.fromValue = -view.bounds.size.width / 2
+    flyRight.toValue = view.bounds.size.width / 2
+    flyRight.duration = 0.5
+    flyRight.fillMode = .both
+//    flyRight.isRemovedOnCompletion = false
+    
+    heading.layer.add(flyRight, forKey: nil)
+
+    flyRight.beginTime = CACurrentMediaTime() + 0.3
+    username.layer.add(flyRight, forKey: nil)
+    
+    flyRight.beginTime = CACurrentMediaTime() + 0.4
+    password.layer.add(flyRight, forKey: nil)
+    
+    username.layer.position.x = view.bounds.width / 2
+    password.layer.position.x = view.bounds.width / 2
+    
+    // background color
+    let changeColor = CABasicAnimation(keyPath: "backgroundColor")
+    changeColor.fromValue = UIColor.white.cgColor
+    changeColor.toValue = UIColor.red.cgColor
+    changeColor.duration = 1.0
+    changeColor.fillMode = .both
+    changeColor.isRemovedOnCompletion = false
+    
+    username.layer.add(changeColor, forKey: nil)
+
+    // opacity
+    let fadeIn = CABasicAnimation(keyPath: "opacity")
+    fadeIn.fromValue = 0.0
+    fadeIn.toValue = 1.0
+    fadeIn.duration = 0.5
+    fadeIn.fillMode = .backwards
+    
+    fadeIn.beginTime = CACurrentMediaTime() + 0.5
+    cloud1.layer.add(fadeIn, forKey: nil)
+    
+    fadeIn.beginTime = CACurrentMediaTime() + 0.7
+    cloud2.layer.add(fadeIn, forKey: nil)
+    
+    fadeIn.beginTime = CACurrentMediaTime() + 0.9
+    cloud3.layer.add(fadeIn, forKey: nil)
+    
+    
+    loginButton.center.y += 30.0
+    loginButton.alpha = 0.0
   }
 
   // MARK: UITextFieldDelegate
